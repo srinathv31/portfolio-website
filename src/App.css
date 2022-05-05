@@ -20,6 +20,9 @@
     display: inline-flex;
     align-items: center;
 }
+.menu-header div {
+    position: Absolute; top: 20px; right: 20px; 
+}
 
 .container {
     display: flex;
