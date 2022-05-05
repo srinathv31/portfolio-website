@@ -1,17 +1,18 @@
 // Source Imports
 import React from "react";
-import { Link } from "react-router-dom";
+import MainMenuLinks from "../components/MainMenuLinks";
 
 export default function Home(): JSX.Element {
     return(
         <>
-            <main>
-                <h2>Welcome to the homepage!</h2>
-                <p>You can do this, I believe in you.</p>
-            </main>
-            <nav>
-                <Link to="/about">About</Link>
-            </nav>
+            <section className="container">
+                <div id="col-1">
+                    <h2>Hi, my name is Srinath Venaktesh</h2>
+                    <p>Welcome to my website.</p>
+                    <p>I like Developing and Creating new things.</p>
+                </div>
+                <MainMenuLinks menuType="main-page"/>
+            </section>
         </>
     );
 }
