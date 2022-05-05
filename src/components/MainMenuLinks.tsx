@@ -30,17 +30,20 @@ export default function MainMenuLinks({ menuType, setToggleDrawer }: {
                 {menuType === "side-menu" && <li>
                     {"Mode: "}<DarkModeToggle checked={!isDarkModeToggle} onChange={()=> setDarkModeToggle(!isDarkModeToggle)} sx={{ m: 1 }}/>
                 </li>}
+                {menuType === "side-menu" && <li>
+                    <Link className="App-link" to="/">Home</Link>
+                </li>}
                 <li>
-                    <Link className="App-link" to="/about">Projects</Link>
+                    <Link className="App-link" to="/projects">Projects</Link>
                 </li>
                 <li>
-                    <Link className="App-link" to="/about">Github</Link>
+                    <a className="App-link" href="https://github.com/srinathv31" target={"_blank"} rel="noreferrer">Github</a>
                 </li>
                 <li>
-                    <Link className="App-link" to="/about">Experience</Link>
+                    <Link className="App-link" to="/experience">Experience</Link>
                 </li>
                 <li>
-                    <Link className="App-link" to="/about">Resume</Link>
+                    <Link className="App-link" to="/about">About</Link>
                 </li>
             </ul>
         </nav>
