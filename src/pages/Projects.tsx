@@ -7,8 +7,8 @@ import Typography from "@mui/material/Typography";
 
 const images = [
     {
-        url: "https://i.imgur.com/8jxX0OC.png",
-        title: "Vital",
+        url: "https://i.imgur.com/BkIeqWm.png",
+        title: "Vital - iOS and Android App",
         width: "30%",
     },
     {
@@ -17,13 +17,13 @@ const images = [
         width: "30%",
     },
     {
-        url: "/static/images/buttons/camera.jpg",
-        title: "NBA Team Wins x Vitamin D Coorelation Analysis Tool",
+        url: "https://i.imgur.com/mkxvGv4.png",
+        title: "NBA Team Wins x Vitamin D Correlation Analysis Tool",
         width: "30%",
     },
     {
-        url: "/static/images/buttons/camera.jpg",
-        title: "NBA Role Player Analysis Tool",
+        url: "https://i.imgur.com/9V25rLf.jpg",
+        title: "NBA Role Player Draft Analysis Tool",
         width: "30%",
     },
     {
@@ -49,7 +49,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
     "&:hover, &.Mui-focusVisible": {
         zIndex: 1,
         "& .MuiImageBackdrop-root": {
-            opacity: 0.15,
+            opacity: 0.25,
         },
         "& .MuiImageMarked-root": {
             opacity: 0,
@@ -89,7 +89,7 @@ const ImageBackdrop = styled("span")(({ theme }) => ({
     top: 0,
     bottom: 0,
     backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
+    opacity: 0.55,
     transition: theme.transitions.create("opacity"),
 }));
 
@@ -124,6 +124,7 @@ export default function Projects() {
                                 component="span"
                                 variant="subtitle1"
                                 color="inherit"
+                                fontWeight={500}
                                 sx={{
                                     position: "relative",
                                     p: 4,
