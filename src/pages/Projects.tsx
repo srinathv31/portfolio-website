@@ -4,6 +4,8 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
+import { Grid } from "@mui/material";
 
 const images = [
     {
@@ -108,36 +110,42 @@ export default function Projects() {
         <>
             <h2>Projects</h2>
             <p>All Projects have GitHub links to look at source code.</p>
-            <Box sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}>
-                {images.map((image) => (
-                    <ImageButton
-                        focusRipple
-                        key={image.title}
-                        style={{
-                            width: image.width
-                        }}
-                    >
-                        <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-                        <ImageBackdrop className="MuiImageBackdrop-root" />
-                        <Image>
-                            <Typography
-                                component="span"
-                                variant="subtitle1"
-                                color="inherit"
-                                fontWeight={500}
-                                sx={{
-                                    position: "relative",
-                                    p: 4,
-                                    pt: 2,
-                                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                                }}
-                            >
-                                {image.title}
-                                <ImageMarked className="MuiImageMarked-root" />
-                            </Typography>
-                        </Image>
-                    </ImageButton>
-                ))}
+            <Box sx={{ width: "100%" }}>
+                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    {images.map((image) => (
+                        <Grid item xs={4} key={image.title}>
+                            <Link style={{ width: "100%" }} to="/">
+                                <ImageButton
+                                    focusRipple
+                                    key={image.title}
+                                    style={{
+                                        width: "90%"
+                                    }}
+                                >
+                                    <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+                                    <ImageBackdrop className="MuiImageBackdrop-root" />
+                                    <Image>
+                                        <Typography
+                                            component="span"
+                                            variant="subtitle1"
+                                            color="inherit"
+                                            fontWeight={500}
+                                            sx={{
+                                                position: "relative",
+                                                p: 4,
+                                                pt: 2,
+                                                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                                            }}
+                                        >
+                                            {image.title}
+                                            <ImageMarked className="MuiImageMarked-root" />
+                                        </Typography>
+                                    </Image>
+                                </ImageButton>
+                            </Link>
+                        </Grid>
+                    ))}
+                </Grid>
             </Box>
         </>
     );
