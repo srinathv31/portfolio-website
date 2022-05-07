@@ -32,8 +32,8 @@ const images = [
         width: "30%",
     },
     {
-        url: "/static/images/buttons/camera.jpg",
-        title: "Youtube Work/Learning Vlogs",
+        url: "https://i.imgur.com/Pv2P5wY.png",
+        title: "NBA Data API",
         width: "30%",
     },
 ];
