@@ -4,16 +4,16 @@ import "./App.css";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import { FooterLinks } from "./components/FooterLinks";
-import MenuButton from "./components/MenuButton";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
+import MainMenuLinks from "./components/MainMenuLinks";
 
 function App() {
     return (
         <div className="App">
             <section className="App-header">
                 <div className="menu-header">
-                    <MenuButton></MenuButton>
+                    <MainMenuLinks menuType="top-menu"/>
                 </div>
                 <Routes>
                     <Route path="/" element={<Home />} />

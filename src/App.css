@@ -24,8 +24,10 @@
   font-size: calc(10px + 2vmin);
 }
 .menu-header {
-    display: inline-flex;
-    align-items: center;
+    justify-content: center;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
 .menu-header div {
     position: Absolute; top: 20px; right: 20px; 
@@ -63,6 +65,22 @@
     margin-bottom: 30px;
     color: var(--white);
 }
+.top-menu {
+    background-color: var(--black);
+    flex: 1;
+    border-left: 1px solid var(--white);
+}
+.top-menu-links {
+    list-style: none;
+    font-size: 30px;
+    font-weight: 300;
+}
+.top-menu-links li {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
 .centered {
     position: relative;
@@ -70,6 +88,12 @@
     left: 50%;
 }
 
+.selected-link {
+    color: #52bdf3;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
 .App-link {
     color: var(--white);
     text-decoration: none;
@@ -94,6 +118,13 @@
 .App-link:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.projects h2 {
+    font-weight: 300;
+}
+.projects p {
+    font-size: large;
 }
 
 footer {

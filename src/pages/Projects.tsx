@@ -107,7 +107,7 @@ const ImageMarked = styled("span")(({ theme }) => ({
 
 export default function Projects() {
     return (
-        <>
+        <div style={{ width: "100%" }} className="projects">
             <h2>Projects</h2>
             <p>All Projects have GitHub links to look at source code.</p>
             <Box sx={{ width: "100%" }}>
@@ -147,6 +147,6 @@ export default function Projects() {
                     ))}
                 </Grid>
             </Box>
-        </>
+        </div>
     );
 }
