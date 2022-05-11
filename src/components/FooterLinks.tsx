@@ -15,7 +15,7 @@ export function FooterLinks() {
         <div>
             <ul>
                 <li style={{ paddingRight: 0 }}>
-                    {"Powered By:"}
+                    {"Website Powered By:"}
                 </li>
                 {linkItems.map((item, index) => {
                     return (

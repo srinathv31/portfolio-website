@@ -127,6 +127,17 @@
     font-size: large;
 }
 
+.card-button-text {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: medium;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
 footer {
     display:flex;
     background-color: var(--black);
